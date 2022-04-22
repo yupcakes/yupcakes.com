@@ -12,6 +12,7 @@ html,
 body {
   color: #64555e;
   font-size: 18px;
+  font-weight: 300;
   line-height: 1.45;
   margin: 0;
 }
@@ -50,15 +51,15 @@ header nav a {
 
 main {
   display: grid;
-  gap: 4rem;
-  grid-template-columns: 1fr 250px;
+  gap: 3rem;
+  grid-template-columns: 1fr 220px;
   padding: 4rem 5vw;
 }
 
 section {
   display: grid;
   grid-gap: 4rem 2rem;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(auto-fit, min(300px, 28vw));
   justify-content: start;
 }
 
@@ -71,7 +72,7 @@ section {
 }
 
 .cupcake h2 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 300;
   letter-spacing: 0.02em;
 }
@@ -89,8 +90,17 @@ section {
   width: 100%;
 }
 
+.cupcake button:hover {
+  background: #ae006822;
+}
+
 aside {
   margin: 0;
+}
+
+.cart {
+  position: sticky;
+  top: 3rem;
 }
 
 aside h3 {
